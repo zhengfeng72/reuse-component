@@ -1,0 +1,55 @@
+select-item-width = 120px
+select-fontsize = 20px
+.detail
+    padding 5px
+    display inline-flex
+    flex-direction row
+    transition all 0.5s ease
+    ul,li
+        display inline-flex
+        list-style none
+    ul
+        flex-direction column
+        display none
+    li
+        cursor pointer
+        width 100%
+        border-bottom 1px solid #afabab
+        div
+            display flex
+            flex 1
+    span
+        font-size select-fontsize
+.select-wrap
+    display flex
+    flex 1
+    flex-direction column
+.select-box
+    display inline-flex
+    box-sizing border-box
+    flex-direction row
+    padding 0 0 0 5px
+    justify-content space-between
+    border-bottom 1px solid #afabab
+    span
+        cursor pointer
+        font-weight bold
+        align-self center
+.select-icons
+    display inline-flex
+    flex-direction column
+    svg
+        cursor pointer
+.select-items
+    &:hover
+        font-weight bold
+        background-color rgb(219,219,219)
+    div
+        padding 7px 5px
+        display inline-flex
+.check.select-items
+    background-color rgb(219,219,219)
+.select-data
+    font-size select-fontsize
+    padding 10px 20px
+    flex 5
