@@ -1,5 +1,9 @@
 img
 
+dist/
+
+src/
+
 # Logs
 logs
 *.log
@@ -62,4 +66,3 @@ typings/
 # next.js build output
 .next
 
-styleguide/
