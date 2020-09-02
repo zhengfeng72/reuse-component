@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { MdArrowDropUp, MdArrowDropDown } from 'react-icons/md'
-
-export default class SelectYear extends Component {
+import propTypes from 'prop-types'
+import './select.styl'
+export default class Select extends Component {
+    static propTypes = {
+        list: propTypes.array.isRequired,
+        current: propTypes.number
+    }
     constructor(props) {
         super(props)
         this.state = {
@@ -9,8 +14,6 @@ export default class SelectYear extends Component {
             current: this.props.current,
             open: false,
         }
-    }
-    async componentDidMount() {
     }
     onDown = () => {
         const { current, index } = this.state
@@ -35,16 +38,15 @@ export default class SelectYear extends Component {
         this.setState({ open: !open })
     }
     onClickhandle = (i) => {
-        console.log(i)
         this.setState({ current: i, open: false })
     }
     render() {
         const { list } = this.props
-        const { open, current, index } = this.state
+        const { open, current = 0, index } = this.state
         return (
             <div className="detail">
                 <div className="select-wrap">
-                    <div className="select-box">
+                    <div className="select-box" >
                         <span onClick={this.onOpen}>{list[current]}</span>
                         <div className="select-icons">
                             <MdArrowDropUp size="20px" onClick={this.onUp} style={current == 0 ? { visibility: "hidden" } : null} />
@@ -60,12 +62,6 @@ export default class SelectYear extends Component {
                             )
                         })}
                     </ul>
-                </div>
-                <div className="select-data">
-                    datadatadatadatadatadata<br/>
-                    datadatadatadatadatadata<br/>
-                    datadatadatadatadatadata<br/>
-                    datadatadatadatadatadata<br/>
                 </div>
             </div>
         )

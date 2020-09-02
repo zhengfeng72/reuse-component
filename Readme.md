@@ -10,5 +10,3 @@
 3. 於 src 收集react component，每個 component 建立獨立資料夾
 4. 執行 `npm run start`查看 domo 
 5. 確認無誤，編譯專案 `npm run build`
-
-
