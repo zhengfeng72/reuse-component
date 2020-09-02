@@ -3,7 +3,10 @@ const path = require('path');
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
   components: 'src/*/*.jsx',
-
+  compilerConfig: {
+    "target":"es5",
+    "esModuleInterop": true
+  },
   webpackConfig: {
     module: {
       rules: [
